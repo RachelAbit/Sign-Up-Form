@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form>
-        
-    </form>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/HotAir.jpg" alt="">
+            <div class="logo-container"></div>
+            <div class="logo">Hot <br> Air <br> Balloon</div>
+        </div>
+        <div class="form-container">
+            <h3>Hi, Welcome to <span>Hot Air Balloon Event </span><br>
+                Let's enjoy ourselves to feel and see the nature up in the Air.
+                <br>
+                <span>Sign up now!</span>
+                <br>
+                <br>
+                Let's do this!
+            </h3>
+            
+            <form action="">
+                <div class="personal-details-1">
+                    <div class="div-1">
+                        <label for="firstname">FIRST NAME</label>
+                        <input type="text" name="fname" id="firstname" pattern="^[a-zA-Z]{6,20}$" required>
+                    </div>
+                    <div class="div-2">
+                        <label for="lastname">LAST NAME</label>
+                        <input type="text" name="lname" id="lastname" pattern="^[a-zA-Z]{3,20}$" required>
+                    </div>
+                </div>
+                <div class="personal-details-2">
+                    <div class="div-3">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" title="ex. johndoe@gmail.com" required>
+                    </div>
+                    <div class="div-4">
+                        <label for="phonenumber">Phone number</label>
+                        <input type="text" name="phone" id="phonenumber" pattern="[0-9]{11}" title="ex. 09123456789" required>
+                    </div>
+                </div>
+                <div class="password">
+                    <div class="div-5">
+                        <label for="password">Password</label>
+                        <input type="password" name="pword" id="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="should be Uppercase, Lowercase, have special characters and/or numbers
+                         and min of 8 characters" required>
+                    </div>
+                    <div class="div-6">
+                        <label for="confirm-pass">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm-pass" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="should match with your password" required>
+                    </div>
+                </div>
+                <button type="submit">Create Account</button>
+                <p class="text">Already have an account? <span><a href="#">Log in</a></span></p>
+            </form>
+            
+        </div>
+    </div>
 </body>
 </html>
